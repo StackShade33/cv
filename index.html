@@ -3,63 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Marion MARTINELLI — Développeuse Web & Web Mobile, en formation, recherche de stage.">
+    <link rel="stylesheet" href="styles.css">
     <title>CV Marion MARTINELLI</title>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header>
         <img src="./assets/images/photo-profil.jpg" alt="Photo de profil de Marion MARTINELLI">
+
         <h1>Marion MARTINELLI</h1>
         <h2>Développeur Web et Web Mobile</h2>
         <div>
             <address>
-                <a href="mailto:marion.martinelli.pro@gmail.com">Mail</a>
-                <a href="https://tinyurl.com/yk5p2bjy" target="_blank" rel="noopener">Adresse</a>
-                <a href="tel:0646365259">Téléphone</a>
+                <a aria-label="Envoyer un mail à marion.martinelli.pro@gmail.com" href="mailto:marion.martinelli.pro@gmail.com">Mail</a>
+                <a href="https://tinyurl.com/yk5p2bjy" target="_blank" rel="noopener noreferrer">Adresse</a>
+                <a href="tel:+33646365259">Téléphone</a>
             </address> 
             <span>Permis B</span>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section>
             <h3>Profil</h3>
-            Actuellement en formation de Développeur Web et Web Mobile, je
+            <p>Actuellement en formation de Développeur Web et Web Mobile, je
             recherche un stage pour mettre mes compétences en pratique et
             contribuer à des projets concrets. Motivée et passionnée par le code,
             je suis prête à m’investir pleinement à vos côtés et à relever les
-            défis !
+            défis !</p>
         </section>
 
         <section>
             <h3>Formations</h3>
-            <p>Titre Professionnel Développeur Web et Web Mobile 
-                <small>Centre Européen de Formation</small>
-                <time datetime="2025">2025 - En cours (Bac+2)</time></p>
+            <ul>
+                <li class="training-item">
+                    <div class="training"><strong>Titre Professionnel Développeur Web et Web Mobile</strong></div>
+                    <span class="year"><time datetime="2025">2025 - En cours (Bac+2)</time></span>
+                    <div class="school"><small>Centre Européen de Formation</small></div>
+                </li>
 
-            <p>Certificat Professionnel de Coach en Développement Personnel 
-                <small>CNFDI</small>
-                <time datetime="2024">2024</time></p>
+                <li class="training-item">
+                    <div class="training"><strong>Certificat Professionnel de Coach en Développement Personnel</strong></div>
+                    <span class="year"><time datetime="2024">2024</time></span>
+                    <div class="school"><small>CNFDI</small></div>
+                </li>
 
-            <p>Certificat Professionnel de Spécialité en Psychologie de l'enfant 
-                <small>CNFDI</small>
-                <time datetime="2024">2024</time></p>
+                <li class="training-item">
+                    <div class="training"><strong>Certificat Professionnel de Spécialité en Psychologie de l'enfant </strong></div>
+                    <span class="year"><time datetime="2024">2024</time></span>
+                    <div class="school"><small>CNFDI</small></div>
+                </li>
 
-            <p>Titre Professionnel Assistante RH 
-                <small>GRETA Talence</small>
-                <time datetime="2017">2017 (Bac+2)</time></p>
-            
-            <p>Titre Professionnel de Maçon du Bâti Ancien 
-                <small>AFPA Caudéran</small>
-                <time datetime="2012">2012 (CAP-BEP)</time></p>
+                <li class="training-item">
+                    <div class="training"><strong>Titre Professionnel Assistante RH</strong></div>
+                    <span class="year"><time datetime="2017">2017 (Bac+2)</time></span>
+                    <div class="school"><small>GRETA Talence</small></div>
+                </li>
+                
+                <li class="training-item">
+                    <div class="training"><strong>Titre Professionnel de Maçon du Bâti Ancien</strong></div>
+                    <span class="year"><time datetime="2012">2012 (CAP-BEP)</time></span>
+                    <div class="school"><small>AFPA Caudéran</small></div>
+                </li>
 
-            <p>Diplôme d'Etat d'Aide-Soignante 
-                <small>IFSI Croix-Rouge Bordeaux</small>
-                <time datetime="2008">2008 (Bac+1)</time></p>
+                <li class="training-item">
+                    <div class="training"><strong>Diplôme d'Etat d'Aide-Soignante</strong></div>
+                    <span class="year"><time datetime="2008">2008 (Bac+1)</time></span>
+                    <div class="school"><small>IFSI Croix-Rouge Bordeaux</small></div>
+                </li>
 
-            <p>Baccalauréat STG (Science et Technologies de Gestion) Option Gestion des Ressources Humaines 
-                <small>Lycée Grand Air Arcachon</small>
-                <time datetime="2007">2007</time></p>
+                <li class="training-item">
+                    <div class="training"><strong>Baccalauréat STG Option Gestion des Ressources Humaines</strong></div>
+                    <span class="year"><time datetime="2007">2007</time></span>
+                    <div class="school"><small>Lycée Grand Air Arcachon</small></div>
+                </li>
+            </ul>
         </section>
 
         <section>
@@ -69,71 +89,98 @@
 
         <section>
             <h3>Expérience professionnelle</h3>
-            <p>Conseillère en Séjour
-                <small>Office de Tourisme du Teich - COBAS</small>
-                <time datetime="2023">2023</time> à <time datetime="2025">Aujourd'hui</time></p>
+            <ul>
+                <li class="experience-item">
 
-            <p>Assistante Administrative
-                <small>APP Bassin formation - COBAS</small>
-                <time datetime="2018">2018</time> à <time datetime="2023">2023</time></p>
+                    <div class="job-title"><strong>Conseillère en Séjour</strong></div>
+                    <span class="period"><time datetime="2023">2023</time> à Aujourd'hui</span>
+                    <div class="company"><small>Office de Tourisme du Teich - COBAS</small></div>
+                </li>
 
-            <p>Assistante RH
-                <small>Egis Exploitation Aquitaine</small>
-                <time datetime="2016">2016</time> à <time datetime="2017">2017</time></p>
+                <li class="experience-item">
+                    <div class="job-title"><strong>Assistante Administrative</strong></div>
+                    <span class="period"><time datetime="2018">2018</time> à <time datetime="2023">2023</time></span>
+                    <div class="company"><small>APP Bassin formation - COBAS</small></div>
+                </li>
 
-            <p>Assistante d'Éducation - Responsable Vie Scolaire
-                <small>Collège de Marcheprime</small>
-                <time datetime="2013">2013</time> à <time datetime="2016">2016</time></p>
+                <li class="experience-item">
+                    <div class="job-title"><strong>Assistante RH</strong></div>
+                    <span class="period"><time datetime="2016">2016</time> à <time datetime="2017">2017</time></span>
+                    <div class="company"><small>Egis Exploitation Aquitaine</small></div>
+                </li>
 
-            <p>Maçon du Bâti Ancien - Tailleur de pierres
-                <small>Diverses entreprises</small>
-                <time datetime="2012">2012</time> à <time datetime="2013">2013</time></p>
+                <li class="experience-item">
+                    <div class="job-title"><strong>Assistante d'Éducation - Responsable Vie Scolaire</strong></div>
+                    <span class="period"><time datetime="2013">2013</time> à <time datetime="2016">2016</time></span>
+                    <div class="company"><small>Collège de Marcheprime</small></div>
+                </li>
 
-            <p>Aide-Soignante
-                <small>Divers services</small>
-                <time datetime="2008">2008</time> à <time datetime="2012">2012</time></p>
+                <li class="experience-item">
+                    <div class="job-title"><strong>Maçon du Bâti Ancien - Tailleur de pierres</strong></div>
+                    <span class="period"><time datetime="2012">2012</time> à <time datetime="2013">2013</time></span>
+                    <div class="company"><small>Diverses entreprises</small></div>
+                </li>
 
-            <p>Emplois Divers
-                <time datetime="2005">2005</time> à <time datetime="2009">2009</time></p>
+                <li class="experience-item">
+                    <div class="job-title"><strong>Aide-Soignante</strong></div>
+                    <span class="period"><time datetime="2008">2008</time> à <time datetime="2012">2012</time></span>
+                    <div class="company"><small>Divers services</small></div>
+                </li>
+
+                <li class="experience-item">
+                    <div class="job-title"><strong>Emplois Divers</strong></div>
+                    <span class="period"><time datetime="2005">2005</time> à <time datetime="2009">2009</time></span>
+                </li>
+            </ul>
         </section>
-
-        <aside>
-            <section>
-                <h3>Compétences</h3>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Git et GitHub</span>
-                <span>Référencement SEO</span>
-            </section>
-
-            <section>
-                <h3>Langues</h3>
-                <span>Français</span><span>Langue maternelle</span>
-                <span>Anglais</span><span>Niveau C1</span>
-            </section>
-
-            <section>
-                <h3>Qualités</h3>
-                <span>Rigueur</span>
-                <span>Organisation</span>
-                <span>Qualité d'expression écrite et orale</span>
-                <span>Esprit d'équipe</span>
-            </section>
-
-             <section>
-                <h3>Centres d'intérêt</h3>
-                <span>Famille</span>
-                <span>Informatique</span>
-                <span>Culture asiatique</span>
-                <span>Lecture</span>
-            </section>
-        </aside>
     </main>
 
+    <aside>
+        <section>
+            <h3>Compétences</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git et GitHub</li>
+                <li>Référencement SEO</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Langues</h3>
+            <ul>
+                <li>Français <span class="level">Langue maternelle</span></li>
+                <li>Anglais <span class="level">Niveau C1</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Qualités</h3>
+            <ul>
+                <li>Rigueur</li>
+                <li>Organisation</li>
+                <li>Qualité d'expression écrite et orale</li>
+                <li>Esprit d'équipe</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Centres d'intérêt</h3>
+            <ul>
+                <li>Famille</li>
+                <li>Informatique</li>
+                <li>Culture Asiatique</li>
+                <li>Lecture</li>
+            </ul>
+        </section>
+    </aside>
+
     <footer>
-        <a href="#"><img src="" alt="Logo de LinkedIn"></a>
-        <a href="https://github.com/StackShade33"><img src="" alt="Logo de GitHub"></a>
-        <a href="#"><img src="" alt="Logo d'Instagram"></a>
+        <!-- En attente images
+        <a aria-label="Profil LinkedIn de Marion" href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="Logo de LinkedIn"></a>
+        <a aria-label="Profil GitHub de Marion" href="https://github.com/StackShade33" target="_blank" rel="noopener noreferrer"><img src="" alt="Logo de GitHub"></a>
+        <a aria-label="Profil Instagram de Marion" href="#" target="_blank" rel="noopener noreferrer"><img src="" alt="Logo d'Instagram"></a>
+        -->
         <small>Mis à jour le 08/11/2025</small>
     </footer>
 </body>
