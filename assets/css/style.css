@@ -30,14 +30,6 @@
     font-style: normal;
 }
 
-/* === RESET ET CONFIGURATION GÉNÉRALE === */
-
-* {
-    margin: 0; /* Supprime les marges par défaut du navigateur */
-    padding: 0;/* Supprime les marges par défaut du navigateur */
-    box-sizing: border-box; /* Marges/bordures incluses dans largeur/hauteur */
-}
-
 /* === POLICES === */
 
 /* Raleway pour tout le contenu par défaut */
@@ -50,11 +42,34 @@ h1, h2, h3 {
     font-family: "Lato", sans-serif;
 }
 
-/* === LAYOUT PRINCIPAL (1160px centré) === */
+/* === RESET ET CONFIGURATION GÉNÉRALE === */
+
+* {
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    padding: 0;/* Supprime les marges par défaut du navigateur */
+    box-sizing: border-box; /* Marges/bordures incluses dans largeur/hauteur */
+}
 
 body {
     width: 1160px;
     margin: 0 auto; /* Centre horizontalement */
+}
+
+/* === HEADER === */
+
+header{
+    background-color: #17abb3;
+    display: flex;
+}
+
+.photo{
+    width: 100px;               /* petite taille */
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;        /* rend la photo ronde */
+    border: 2px solid white;   /* bordure blanche */
+    object-fit: cover;   /* évite la déformation de la photo */
+    object-position: top left;
 }
 
 /* === ACCESSIBILITÉ === */
