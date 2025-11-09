@@ -30,6 +30,14 @@
     font-style: normal;
 }
 
+/* === RESET ET CONFIGURATION GÉNÉRALE === */
+
+* {
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    padding: 0;/* Supprime les marges par défaut du navigateur */
+    box-sizing: border-box; /* Marges/bordures incluses dans largeur/hauteur */
+}
+
 /* === POLICES === */
 
 /* Raleway pour tout le contenu par défaut */
@@ -42,7 +50,15 @@ h1, h2, h3 {
     font-family: "Lato", sans-serif;
 }
 
+/* === LAYOUT PRINCIPAL (1160px centré) === */
+
+body {
+    width: 1160px;
+    margin: 0 auto; /* Centre horizontalement */
+}
+
 /* === ACCESSIBILITÉ === */
+
 .skip-link {
     position: absolute;
     top: -40px;
