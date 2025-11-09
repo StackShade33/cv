@@ -1,6 +1,48 @@
+/* IMPORT Google Fonts en premier */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Lien invisible accessibilité */
+/* Raleway via @font-face avec fallback woff → ttf */
 
+/* Raleway Regular */
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.woff') format('woff'),
+         url('../fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Raleway Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Italic.woff') format('woff'),
+         url('../fonts/Raleway-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Raleway Bold */
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.woff') format('woff'),
+         url('../fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* === POLICES === */
+
+/* Raleway pour tout le contenu par défaut */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Lato uniquement pour les titres */
+h1, h2, h3 {
+    font-family: "Lato", sans-serif;
+}
+
+/* === ACCESSIBILITÉ === */
 .skip-link {
     position: absolute;
     top: -40px;
