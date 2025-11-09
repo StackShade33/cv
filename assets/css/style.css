@@ -63,13 +63,13 @@ header{
 }
 
 .photo{
-    width: 100px;               /* petite taille */
+    width: 100px;               /* taille de la photo */
     height: 100px;
-    margin: 20px;
+    margin: 20px;               /* espace autour de la photo */
     border-radius: 50%;        /* rend la photo ronde */
     border: 2px solid white;   /* bordure blanche */
     object-fit: cover;   /* évite la déformation de la photo */
-    object-position: top left;
+    object-position: top left; /* prend le coin en haut à gauche de la photo */
 }
 
 /* === ACCESSIBILITÉ === */
