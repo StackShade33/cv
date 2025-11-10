@@ -1,527 +1,528 @@
 /* IMPORT Google Fonts en premier */
+/* Importe la police Lato depuis Google Fonts avec les variantes italic, regular et bold */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Raleway via @font-face avec fallback woff → ttf */
 
 /* Raleway Regular */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Regular.woff') format('woff'),
-         url('../fonts/Raleway-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Raleway'; /* Nom de la police */
+    src: url('../fonts/Raleway-Regular.woff') format('woff'), /* Charge le fichier woff en priorité */
+         url('../fonts/Raleway-Regular.ttf') format('truetype'); /* Si woff échoue, charge le ttf */
+    font-weight: 400; /* Poids normal */
+    font-style: normal; /* Style normal (pas italique) */
 }
 
 /* Raleway Italic */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Italic.woff') format('woff'),
-         url('../fonts/Raleway-Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Raleway'; /* Même nom de police */
+    src: url('../fonts/Raleway-Italic.woff') format('woff'), /* Fichier italique woff */
+         url('../fonts/Raleway-Italic.ttf') format('truetype'); /* Fichier italique ttf */
+    font-weight: 400; /* Poids normal */
+    font-style: italic; /* Style italique */
 }
 
 /* Raleway Bold */
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Bold.woff') format('woff'),
-         url('../fonts/Raleway-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Raleway'; /* Même nom de police */
+    src: url('../fonts/Raleway-Bold.woff') format('woff'), /* Fichier gras woff */
+         url('../fonts/Raleway-Bold.ttf') format('truetype'); /* Fichier gras ttf */
+    font-weight: 700; /* Poids gras */
+    font-style: normal; /* Style normal */
 }
 
 /* === POLICES === */
 
 /* Raleway pour tout le contenu par défaut */
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif; /* Applique Raleway à tout le body, avec sans-serif en fallback */
 }
 
 /* Lato uniquement pour les titres */
 h1, h2, h3 {
-    font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif; /* Applique Lato aux titres h1, h2, h3 */
 }
 
 /* === RESET ET CONFIGURATION GÉNÉRALE === */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Supprime toutes les marges par défaut du navigateur */
+    padding: 0; /* Supprime tous les paddings par défaut du navigateur */
+    box-sizing: border-box; /* Les marges et bordures sont incluses dans la largeur/hauteur */
 }
 
 body {
-    width: 1160px;
-    margin: 0 auto;
-    background-color: #f5f5f5;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #333;
+    width: 1160px; /* Largeur fixe du CV */
+    margin: 0 auto; /* Centre le CV horizontalement */
+    background-color: #f5f5f5; /* Couleur de fond gris très clair */
+    font-size: 14px; /* Taille de police par défaut */
+    line-height: 1.6; /* Hauteur de ligne pour l'espacement vertical du texte */
+    color: #333; /* Couleur du texte gris foncé */
 }
 
 /* === HEADER === */
 
 header {
-    background-color: #17abb3;
-    display: flex;
-    align-items: center;
-    padding: 30px 0 30px 40px;
-    color: white;
-    position: relative;
+    background-color: #17abb3; /* Couleur de fond turquoise */
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    padding: 30px 0 30px 40px; /* Padding : 30px haut, 0 droite, 30px bas, 40px gauche */
+    color: white; /* Couleur du texte blanc */
+    position: relative; /* Pour permettre le positionnement absolu des enfants */
 }
 
 /* Effet n°2 : Zoom de la photo au survol */
 .photo-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 320px;
-    cursor: zoom-in;
-    flex-shrink: 0;
+    display: flex; /* Utilise flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    width: 320px; /* Largeur correspondant à celle de l'aside */
+    cursor: zoom-in; /* Change le curseur en loupe au survol */
+    flex-shrink: 0; /* Empêche le conteneur de rétrécir */
 }
 
 .photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    object-position: top center;
-    transition: transform 0.3s ease;
-    display: block;
+    width: 150px; /* Largeur de la photo */
+    height: 150px; /* Hauteur de la photo */
+    border-radius: 50%; /* Rend la photo ronde (cercle) */
+    border: 5px solid white; /* Bordure blanche de 5px */
+    object-fit: cover; /* Recadre l'image pour remplir le cercle sans déformation */
+    object-position: top center; /* Positionne l'image en haut au centre */
+    transition: transform 0.3s ease; /* Transition fluide pour l'effet de zoom */
+    display: block; /* Affiche en bloc */
 }
 
 .photo-link:hover .photo {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Agrandit la photo de 5% au survol */
 }
 
 /* Conteneur central avec titre et contact */
 .header-center {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-right: 40px;
+    flex: 1; /* Prend tout l'espace disponible */
+    display: flex; /* Utilise flexbox */
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centre le texte */
+    padding-right: 40px; /* Padding à droite pour équilibrer */
 }
 
 header h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin: 0;
-    text-transform: capitalize;
-    letter-spacing: 2px;
+    font-size: 42px; /* Grande taille pour le nom */
+    font-weight: 700; /* Texte gras */
+    margin: 0; /* Pas de marge */
+    text-transform: capitalize; /* Première lettre de chaque mot en majuscule */
+    letter-spacing: 2px; /* Espacement entre les lettres */
 }
 
 header h2 {
-    font-size: 22px;
-    font-weight: 400;
-    margin: 5px 0 20px 0;
-    opacity: 0.95;
+    font-size: 22px; /* Taille moyenne pour le titre du poste */
+    font-weight: 400; /* Poids normal */
+    margin: 5px 0 20px 0; /* Marge : 5px haut, 0 côtés, 20px bas */
+    opacity: 0.95; /* Légèrement transparent */
 }
 
 /* Infos de contact en 2 colonnes */
 .header-contact {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px 30px;
-    justify-content: center;
+    display: grid; /* Utilise CSS Grid */
+    grid-template-columns: auto auto; /* 2 colonnes de taille automatique */
+    gap: 10px 30px; /* Espacement : 10px vertical, 30px horizontal */
+    justify-content: center; /* Centre la grille */
 }
 
 header address {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-style: normal;
-    align-items: flex-start;
+    display: flex; /* Utilise flexbox */
+    flex-direction: column; /* Empile verticalement */
+    gap: 8px; /* Espacement de 8px entre les éléments */
+    font-style: normal; /* Annule l'italique par défaut de <address> */
+    align-items: flex-start; /* Aligne à gauche */
 }
 
 .header-right {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
+    display: flex; /* Utilise flexbox */
+    flex-direction: column; /* Empile verticalement */
+    gap: 8px; /* Espacement de 8px entre les éléments */
+    align-items: flex-start; /* Aligne à gauche */
 }
 
 header address a,
 .header-right a,
 .header-contact span {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    font-size: 13px; /* Petite taille de police */
+    display: flex; /* Utilise flexbox pour aligner icône + texte */
+    align-items: center; /* Centre verticalement */
+    gap: 8px; /* Espacement entre icône et texte */
 }
 
 header address a:hover,
 .header-right a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Souligne au survol */
 }
 
 /* Icônes du header - petites et blanches */
 header address img,
 .header-right img,
 .header-contact span img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
+    width: 20px; /* Largeur des icônes */
+    height: 20px; /* Hauteur des icônes */
+    filter: brightness(0) invert(1); /* Transforme les icônes en blanc */
 }
 
 /* === CONTAINER PRINCIPAL === */
 
 .container {
-    display: flex;
-    gap: 0;
-    background-color: white;
+    display: flex; /* Utilise flexbox */
+    gap: 0; /* Pas d'espace entre aside et main */
+    background-color: white; /* Fond blanc */
 }
 
 /* === ASIDE (COLONNE GAUCHE) === */
 
 aside {
-    width: 320px;
-    background-color: #f5f5f5;
-    padding: 40px 30px;
-    flex-shrink: 0;
+    width: 320px; /* Largeur fixe de la colonne gauche */
+    background-color: #f5f5f5; /* Fond gris clair */
+    padding: 40px 30px; /* Padding vertical 40px, horizontal 30px */
+    flex-shrink: 0; /* Empêche la colonne de rétrécir */
 }
 
 aside section {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Espace de 40px entre chaque section */
 }
 
 aside h2 {
-    color: #17abb3;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #e3e3e3;
-    padding-bottom: 8px;
+    color: #17abb3; /* Couleur turquoise pour les titres */
+    font-size: 18px; /* Taille des titres */
+    font-weight: 700; /* Texte gras */
+    margin-bottom: 15px; /* Espace en dessous du titre */
+    text-transform: uppercase; /* Tout en majuscules */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+    border-bottom: 2px solid #e3e3e3; /* Bordure grise en bas */
+    padding-bottom: 8px; /* Espace entre le texte et la bordure */
 }
 
 aside ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Enlève les puces par défaut */
+    padding: 0; /* Pas de padding */
 }
 
 aside li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    padding-left: 15px;
-    position: relative;
+    margin-bottom: 10px; /* Espace entre les items */
+    font-size: 14px; /* Taille du texte */
+    padding-left: 15px; /* Espace à gauche pour la puce */
+    position: relative; /* Pour positionner la puce en absolu */
 }
 
 aside li::before {
-    content: "●";
-    color: #17abb3;
-    position: absolute;
-    left: 0;
-    font-size: 10px;
+    content: "●"; /* Ajoute un cercle comme puce */
+    color: #17abb3; /* Couleur turquoise */
+    position: absolute; /* Positionnement absolu */
+    left: 0; /* À gauche */
+    font-size: 10px; /* Petite taille */
 }
 
 /* Compétences avec étoiles */
 aside section:first-child li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0;
+    display: flex; /* Utilise flexbox */
+    justify-content: space-between; /* Espace entre nom et étoiles */
+    align-items: center; /* Centre verticalement */
+    padding-left: 0; /* Pas de padding (pas de puce) */
 }
 
 aside section:first-child li::before {
-    display: none;
+    display: none; /* Cache la puce pour les compétences */
 }
 
 .skill-name {
-    flex: 1;
+    flex: 1; /* Prend l'espace disponible */
 }
 
 .stars {
-    display: flex;
-    gap: 2px;
-    font-size: 16px;
+    display: flex; /* Utilise flexbox pour aligner les étoiles */
+    gap: 2px; /* Petit espace entre les étoiles */
+    font-size: 16px; /* Taille des étoiles */
 }
 
 .star {
-    color: #17abb3;
+    color: #17abb3; /* Couleur turquoise pour les étoiles */
 }
 
 .star.filled {
-    color: #17abb3;
+    color: #17abb3; /* Couleur turquoise pour les étoiles pleines */
 }
 
 /* Langues sans puces avec alignement */
 aside section:nth-child(2) li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0;
+    display: flex; /* Utilise flexbox */
+    justify-content: space-between; /* Espace entre langue et niveau */
+    align-items: center; /* Centre verticalement */
+    padding-left: 0; /* Pas de padding (pas de puce) */
 }
 
 aside section:nth-child(2) li::before {
-    display: none;
+    display: none; /* Cache la puce pour les langues */
 }
 
 .language-name {
-    flex: 1;
+    flex: 1; /* Prend l'espace disponible */
 }
 
 aside section:nth-child(2) .level {
-    display: inline;
-    font-size: 14px;
-    color: #333;
-    margin-top: 0;
-    padding-left: 0;
-    text-align: right;
+    display: inline; /* Affichage en ligne */
+    font-size: 14px; /* Taille du texte */
+    color: #333; /* Couleur gris foncé */
+    margin-top: 0; /* Pas de marge en haut */
+    padding-left: 0; /* Pas de padding */
+    text-align: right; /* Alignement à droite */
 }
 
 /* Qualités et Centres d'intérêt avec puces carrées */
 aside section:nth-child(3) li::before,
 aside section:nth-child(4) li::before {
-    content: "■";
-    color: #17abb3;
-    position: absolute;
-    left: 0;
-    font-size: 10px;
-    font-weight: 900;
-    top: 50%;
-    transform: translateY(-50%);
+    content: "■"; /* Ajoute un carré comme puce */
+    color: #17abb3; /* Couleur turquoise */
+    position: absolute; /* Positionnement absolu */
+    left: 0; /* À gauche */
+    font-size: 10px; /* Petite taille */
+    font-weight: 900; /* Très gras */
+    top: 50%; /* À 50% de la hauteur */
+    transform: translateY(-50%); /* Centre verticalement */
 }
 
 /* === MAIN (COLONNE DROITE) === */
 
 main {
-    flex: 1;
-    padding: 40px 50px;
-    background-color: white;
+    flex: 1; /* Prend tout l'espace restant */
+    padding: 40px 50px; /* Padding vertical 40px, horizontal 50px */
+    background-color: white; /* Fond blanc */
 }
 
 main section {
-    margin-bottom: 35px;
+    margin-bottom: 35px; /* Espace entre les sections */
 }
 
 main h2 {
-    color: #17abb3;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #e3e3e3;
-    padding-bottom: 8px;
+    color: #17abb3; /* Couleur turquoise */
+    font-size: 20px; /* Taille du titre */
+    font-weight: 700; /* Texte gras */
+    margin-bottom: 20px; /* Espace en dessous */
+    text-transform: uppercase; /* Tout en majuscules */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+    border-bottom: 2px solid #e3e3e3; /* Bordure grise en bas */
+    padding-bottom: 8px; /* Espace entre le texte et la bordure */
 }
 
 main p {
-    font-size: 14px;
-    line-height: 1.8;
-    text-align: justify;
-    color: #444;
-    text-indent: 30px;
+    font-size: 14px; /* Taille du texte */
+    line-height: 1.8; /* Hauteur de ligne pour l'espacement */
+    text-align: justify; /* Justifie le texte */
+    color: #444; /* Couleur gris moyen */
+    text-indent: 30px; /* Indentation de la première ligne (tabulation) */
 }
 
 main ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Enlève les puces par défaut */
+    padding: 0; /* Pas de padding */
 }
 
 /* === FORMATIONS === */
 
 .training-item {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px 15px;
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.3s ease;
+    margin-bottom: 25px; /* Espace entre les items */
+    display: flex; /* Utilise flexbox */
+    justify-content: space-between; /* Espace entre gauche et droite */
+    align-items: flex-start; /* Aligne en haut */
+    padding: 10px 15px; /* Padding interne */
+    border-radius: 5px; /* Coins arrondis */
+    position: relative; /* Pour le trait vertical en pseudo-élément */
+    transition: all 0.3s ease; /* Transition fluide pour tous les effets */
 }
 
 .training-item::before {
-    display: none;
+    display: none; /* Cache le pseudo-élément before */
 }
 
 /* Effet n°1 : Trait vertical et fond gris au survol */
 .training-item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: #17abb3;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    content: ""; /* Contenu vide pour créer le trait */
+    position: absolute; /* Positionnement absolu */
+    left: 0; /* À gauche */
+    top: 0; /* En haut */
+    bottom: 0; /* En bas */
+    width: 3px; /* Largeur du trait */
+    background-color: #17abb3; /* Couleur turquoise */
+    opacity: 0; /* Invisible par défaut */
+    transition: opacity 0.3s ease; /* Transition fluide pour l'apparition */
 }
 
 .training-item:hover {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Fond gris au survol */
 }
 
 .training-item:hover::after {
-    opacity: 1;
+    opacity: 1; /* Rend le trait visible au survol */
 }
 
 .training-left {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace disponible */
 }
 
 .training-item .training {
-    font-size: 15px;
-    margin-bottom: 0;
+    font-size: 15px; /* Taille du texte */
+    margin-bottom: 0; /* Pas d'espace en dessous */
 }
 
 .training-item .year {
-    color: #17abb3;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-    margin-left: 20px;
+    color: #17abb3; /* Couleur turquoise */
+    font-size: 13px; /* Petite taille */
+    font-weight: 600; /* Semi-gras */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    margin-left: 20px; /* Espace à gauche */
 }
 
 .training-item .school {
-    color: #666;
-    font-size: 13px;
-    font-style: italic;
-    margin-top: 0;
+    color: #666; /* Couleur gris moyen */
+    font-size: 13px; /* Petite taille */
+    font-style: italic; /* Texte en italique */
+    margin-top: 0; /* Pas d'espace en haut */
 }
 
 /* === EXPÉRIENCE PROFESSIONNELLE === */
 
 .experience-item {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px 15px;
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.3s ease;
+    margin-bottom: 25px; /* Espace entre les items */
+    display: flex; /* Utilise flexbox */
+    justify-content: space-between; /* Espace entre gauche et droite */
+    align-items: flex-start; /* Aligne en haut */
+    padding: 10px 15px; /* Padding interne */
+    border-radius: 5px; /* Coins arrondis */
+    position: relative; /* Pour le trait vertical en pseudo-élément */
+    transition: all 0.3s ease; /* Transition fluide pour tous les effets */
 }
 
 .experience-item::before {
-    display: none;
+    display: none; /* Cache le pseudo-élément before */
 }
 
 /* Effet n°1 : Trait vertical et fond gris au survol */
 .experience-item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: #17abb3;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    content: ""; /* Contenu vide pour créer le trait */
+    position: absolute; /* Positionnement absolu */
+    left: 0; /* À gauche */
+    top: 0; /* En haut */
+    bottom: 0; /* En bas */
+    width: 3px; /* Largeur du trait */
+    background-color: #17abb3; /* Couleur turquoise */
+    opacity: 0; /* Invisible par défaut */
+    transition: opacity 0.3s ease; /* Transition fluide pour l'apparition */
 }
 
 .experience-item:hover {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Fond gris au survol */
 }
 
 .experience-item:hover::after {
-    opacity: 1;
+    opacity: 1; /* Rend le trait visible au survol */
 }
 
 .experience-left {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace disponible */
 }
 
 .experience-item .job-title {
-    font-size: 15px;
-    margin-bottom: 0;
+    font-size: 15px; /* Taille du texte */
+    margin-bottom: 0; /* Pas d'espace en dessous */
 }
 
 .experience-item .period {
-    color: #17abb3;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-    margin-left: 20px;
+    color: #17abb3; /* Couleur turquoise */
+    font-size: 13px; /* Petite taille */
+    font-weight: 600; /* Semi-gras */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    margin-left: 20px; /* Espace à gauche */
 }
 
 .experience-item .company {
-    color: #666;
-    font-size: 13px;
-    font-style: italic;
-    margin-top: 0;
+    color: #666; /* Couleur gris moyen */
+    font-size: 13px; /* Petite taille */
+    font-style: italic; /* Texte en italique */
+    margin-top: 0; /* Pas d'espace en haut */
 }
 
 /* === FOOTER === */
 
 footer {
-    background-color: #17abb3;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #17abb3; /* Couleur de fond turquoise */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Padding de 20px tout autour */
 }
 
 footer a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: opacity 0.3s;
+    display: inline-block; /* Affichage en ligne-bloc */
+    margin: 0 10px; /* Marge horizontale de 10px */
+    transition: opacity 0.3s; /* Transition fluide pour l'opacité */
 }
 
 /* Effet n°3 : Réduction de l'opacité au survol des réseaux sociaux */
 footer a:hover {
-    opacity: 0.6;
+    opacity: 0.6; /* Réduit l'opacité à 60% au survol */
 }
 
 footer a img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1);
-    transition: opacity 0.3s;
+    width: 30px; /* Largeur des icônes */
+    height: 30px; /* Hauteur des icônes */
+    filter: brightness(0) invert(1); /* Transforme les icônes en blanc */
+    transition: opacity 0.3s; /* Transition fluide pour l'opacité */
 }
 
 footer small {
-    font-size: 12px;
-    display: block;
-    margin-top: 15px;
+    font-size: 12px; /* Petite taille de police */
+    display: block; /* Affichage en bloc (nouvelle ligne) */
+    margin-top: 15px; /* Espace en haut */
 }
 
 /* === ACCESSIBILITÉ === */
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
+    position: absolute; /* Positionnement absolu */
+    top: -40px; /* Caché au-dessus de la page */
+    left: 0; /* À gauche */
+    background: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    padding: 8px; /* Padding de 8px */
+    text-decoration: none; /* Pas de soulignement */
+    z-index: 100; /* Au-dessus de tout */
 }
 
 .skip-link:focus {
-    top: 0;
+    top: 0; /* Apparaît en haut de la page quand il reçoit le focus */
 }
 
 /* === RESPONSIVE (optionnel) === */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) { /* Pour les écrans de moins de 1200px */
     body {
-        width: 100%;
-        max-width: 1160px;
+        width: 100%; /* Largeur à 100% */
+        max-width: 1160px; /* Largeur maximale de 1160px */
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /* Pour les tablettes et mobiles */
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Empile les colonnes verticalement */
     }
     
     aside {
-        width: 100%;
+        width: 100%; /* Prend toute la largeur */
     }
     
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Empile les éléments du header verticalement */
+        text-align: center; /* Centre le texte */
     }
     
     .photo-link {
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px auto; /* Centre la photo avec espace en bas */
     }
 }
