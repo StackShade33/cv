@@ -65,22 +65,24 @@ header {
     background-color: #17abb3;
     display: flex;
     align-items: center;
-    padding: 30px 40px;
+    padding: 30px 0 30px 40px;
     color: white;
     position: relative;
 }
 
 /* Effet n°2 : Zoom de la photo au survol */
 .photo-link {
-    display: block;
-    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
     cursor: zoom-in;
     flex-shrink: 0;
 }
 
 .photo {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 5px solid white;
     object-fit: cover;
@@ -100,13 +102,14 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-right: 40px;
 }
 
 header h1 {
     font-size: 42px;
     font-weight: 700;
     margin: 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
 }
 
